@@ -1,6 +1,7 @@
 # Data Folder #
 ###############
 .data/
+.models/
 
 # Compiled source #
 ###################
