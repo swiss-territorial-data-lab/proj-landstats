@@ -1,4 +1,4 @@
-# porj-landstats
+# proj-landstats
 
 In progress
 
