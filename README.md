@@ -139,25 +139,26 @@ For neural network model in this project, focal loss is selected as the loss fun
 epoch for the learning rate scheduler to work for different configuration of `\gamma`. The configuration can be changed 
 with the following arguments:
 
-`
+```
 python script/temporal_spatial.py --alpha 0.95 --gamma 3 --lr 2e-6 --milestones 30 60 90
-`
+```
 
 For integration FCN model training, we need to choose the temporal-spatial module and clarify where the extracted 
 features are stored. If you save those file in `scripts/temp_results/` folder with file names as 
 `temporal_spatial_proba_lr.pkl` and `temporal_spatial_proba_FCN.pkl` for logistic regression and FCN respectively, the 
 arguments `base_path` can be omitted. 
 
-`
+```
 python script/integration.py --base lr --alpha 0.95 --gamma 3 --lr 2e-6 --milestones 30 60 90
 python script/integration.py --base fcn --alpha 0.95 --gamma 3 --lr 2e-6 --milestones 30 60 90
-`
+```
 
 Otherwise, the following command should be used:
 
-`
+```
 python script/integration.py --base_path PATH_OF_FILE --alpha 0.95 --gamma 3 --lr 2e-6 --milestones 30 60 90
-`
+```
+
 
 # Reference 
 
