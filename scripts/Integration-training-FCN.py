@@ -47,7 +47,7 @@ def parse_args():
 
 
 def main(args):
-    ckpt_dir = './integrate-{}-fcn/ckpt-{}-{}-{}-{}'.format(args.base, args.alpha, args.gamma, args.lr, args.batch_size)
+    ckpt_dir = '/integrate-{}-fcn/ckpt-{}-{}-{}-{}'.format(args.base, args.alpha, args.gamma, args.lr, args.batch_size)
     ckpt_dir = os.path.join(args.OUT_DIR, ckpt_dir)
 
     if not os.path.exists(ckpt_dir):
@@ -98,11 +98,11 @@ def main(args):
     val_features = val.drop('changed', axis=1)
     logging.info('Length of the val dataset : {}'.format(len(val)))
 
-    X_train = torch.Tensor(train_features.values).cuda()
-    y_train = torch.Tensor(train_label.values).cuda()
+    X_train = torch.Tensor(train_features.values).to(device)
+    y_train = torch.Tensor(train_label.values).to(device)
 
-    X_val = torch.Tensor(val_features.values).cuda()
-    y_val = torch.Tensor(val_label.values).cuda()
+    X_val = torch.Tensor(val_features.values).to(device)
+    y_val = torch.Tensor(val_label.values).to(device)
 
     train_set = Dataset(X_train, y_train)
 
@@ -117,7 +117,7 @@ def main(args):
 
     train_loader = DataLoader(train_set, batch_size=batch_size, shuffle=False)
 
-    model = FCN(input_dim, output_dim).cuda()
+    model = FCN(input_dim, output_dim).to(device)
 
     optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
     scheduler = MultiStepLR(optimizer, milestones=args.milestones, gamma=0.2)
