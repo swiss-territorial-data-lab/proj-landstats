@@ -108,10 +108,10 @@ this tile is 74222228._
 
 Above image demonstrates the workflow of the project. The first part is the temporal-spatial module on the top right. 
 This module explored the performance of Logistic Regression / Random Forest / XGBoost / Fully Connected Network (FCN) / 
-ConvRNN with the information from neighbour tiles. The second part is the integration module at the center, which 
-combines the output from all kinds of modules with different source data. Here we extracted the probability to change 
-from the temporal-spatial module as feature. After that, the performance improvement from neighbor information was 
-studied on the basis of the image level prediction (left part of the image).
+ConvRNN with the information from neighbour tiles. At the end of this part, we extracted the probability to change from 
+the temporal-spatial module as features for next step. The second part is the integration module at the center, which 
+combines the output from all kinds of modules with different source data. After that, the performance improvement from 
+neighbor information was studied on the basis of the image level prediction (left part of the image).
 
 _image-level prediction: uses current and historical aerial image to predict the land cover/land use classes of the 
 input tile. The output contains both prediction and confidence for multi-class classification._
