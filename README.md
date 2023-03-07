@@ -126,10 +126,11 @@ input tile. The output contains both prediction and confidence for multi-class c
 respectively. Once the model is fine-tuned, the probability to change would be extracted to a temporary file for later 
 stages in the same script. Here we only implement the feature extraction for `Logistic Regression` and `FCN`, since they
 have better performance.
-6. The integration module is trained by `Integrate-training-RF.ipynb` and `Integration-training-FCN.py `. For this module, 
+6.Abalation study of using image-level data only is shown in `Abalation_image-level.ipynb`. 
+7. The integration module is trained by `Integrate-training-RF.ipynb` and `Integration-training-FCN.py `. For this module, 
 only Random Forest and FCN are studied so far.  
-7. The integration module is evaluated by `evaluation-integrate-module.ipynb`.
-8. Abalation study of using image-level data only is shown in `Abalation_image-level.ipynb`.
+8. The integration module is evaluated by `evaluation-integrate-module.ipynb`.
+
 
 ## Model Fine-tuning 
 
