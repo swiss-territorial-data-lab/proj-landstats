@@ -125,11 +125,11 @@ input tile. The output contains both prediction and confidence for multi-class c
 5. When it comes to the temporal-spatial module, the model should be applied to train, validation and test set 
 respectively. Once the model is fine-tuned, the probability to change would be extracted to a temporary file for later 
 stages in the same script. Here we only implement the feature extraction for `Logistic Regression` and `FCN`, since they
-have better performance.  
-6.Abalation study of using image-level data only is shown in `Abalation_image-level.ipynb`.  
-7. The integration module is trained by `Integrate-training-RF.ipynb` and `Integration-training-FCN.py `. For this module, 
+have better performance.
+6. Abalation study of using image-level data only is shown in `Abalation_image-level.ipynb`.
 only Random Forest and FCN are studied so far.  
-8. The integration module is evaluated by `evaluation-integrate-module.ipynb`.
+7. The integration module is evaluated by `evaluation-integrate-module.ipynb`. 
+8. The integration module is trained by `Integrate-training-RF.ipynb` and `Integration-training-FCN.py `. For this module, 
 
 
 ## Model Fine-tuning 
